@@ -24,7 +24,6 @@ public class Scan : MonoBehaviour
         modelScript.HideWolfModel();
         modelScript.HideTigerModel();
         modelScript.HideEagleModel();
-        modelScript.HideHorseModel();
         modelScript.HideRhinoModel();
     }
     void Update()

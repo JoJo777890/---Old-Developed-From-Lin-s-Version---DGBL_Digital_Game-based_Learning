@@ -88,10 +88,6 @@ public class Old_Scan : MonoBehaviour
         {
             modelScript.ShowEagleModel();
         }
-        else if (displayText == "horse")
-        {
-            modelScript.ShowHorseModel();
-        }
         else if (displayText == "rhino")
         {
             modelScript.ShowRhinoModel();
@@ -105,7 +101,6 @@ public class Old_Scan : MonoBehaviour
             modelScript.HideWolfModel();
             modelScript.HideTigerModel();
             modelScript.HideEagleModel();
-            modelScript.HideHorseModel();
             modelScript.HideRhinoModel();
 
         }
