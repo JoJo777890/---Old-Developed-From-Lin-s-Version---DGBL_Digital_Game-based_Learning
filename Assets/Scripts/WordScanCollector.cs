@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class WordScanCollector : MonoBehaviour
 {
     public Text scanMessage;
+    public TextMeshProUGUI statScore;
     public GameObject[] bookSymbolObjects;
     public string[] animalNames = { "cat", "fox", "bear", "wolf", "tiger", "eagle", "rhino" };
 
+    private bool doAddScore = false;
+    private int playerScore = 0;
     private string currMessage;
     private string fullMessage;
     //public Scan[]
@@ -35,13 +40,10 @@ public class WordScanCollector : MonoBehaviour
             // 顯示訊息 + currMessage
             fullMessage += currMessage;
 
-            // 如果 currMessage 符合陣列中的動物名稱，在訊息後面加上"Correct! (+100)"
-            for (int j = 0; j < animalNames.Length; j++)
+            // 在訊息後面加上"Correct! (+100)"
+            if (CheckAnimals() == true)
             {
-                if (string.Equals(currMessage, animalNames[j]) == true)
-                {
-                    fullMessage += " Correct! (+100)";
-                }
+                fullMessage += " Correct! (+100)";
             }
 
             // 顯示訊息 + "下一行"
@@ -50,5 +52,20 @@ public class WordScanCollector : MonoBehaviour
 
         // String 顯示
         scanMessage.text = fullMessage;
+        statScore.text = "Score: " + playerScore.ToString();
+    }
+
+    bool CheckAnimals()
+    {
+        // 檢查 currMessage 是否符合陣列中的動物名稱
+        for (int j = 0; j < animalNames.Length; j++)
+        {
+            if (string.Equals(currMessage, animalNames[j]) == true)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
