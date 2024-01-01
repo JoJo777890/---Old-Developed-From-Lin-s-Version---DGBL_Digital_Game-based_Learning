@@ -114,10 +114,6 @@ public class Scan : MonoBehaviour
         {
             modelScript.ShowEagleModel();
         }
-        else if (displayText == "horse")
-        {
-            modelScript.ShowHorseModel();
-        }
         else if (displayText == "rhino")
         {
             modelScript.ShowRhinoModel();

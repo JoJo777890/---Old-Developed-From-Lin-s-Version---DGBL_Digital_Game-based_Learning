@@ -10,7 +10,6 @@ public class Model : MonoBehaviour
     public GameObject wolfModel;
     public GameObject tigerModel;
     public GameObject eagleModel;
-    public GameObject horseModel;
     public GameObject rhinoModel;
 
     void Start()
@@ -22,7 +21,6 @@ public class Model : MonoBehaviour
         wolfModel.SetActive(false);
         tigerModel.SetActive(false);
         eagleModel.SetActive(false);
-        horseModel.SetActive(false);
         rhinoModel.SetActive(false);
     }
 
@@ -78,15 +76,6 @@ public class Model : MonoBehaviour
     public void HideEagleModel()
     {
         eagleModel.SetActive(false);
-    }
-
-    public void ShowHorseModel() //馬
-    {
-        horseModel.SetActive(true);
-    }
-    public void HideHorseModel()
-    {
-        horseModel.SetActive(false);
     }
 
     public void ShowRhinoModel() //犀牛
