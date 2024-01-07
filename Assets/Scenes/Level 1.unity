@@ -2351,6 +2351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ant_Red (Shadow)
       objectReference: {fileID: 0}
+    - target: {fileID: 1006988486051157077, guid: 00b286560eaefde47802ef4271efe745,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7882049962744293923, guid: 00b286560eaefde47802ef4271efe745,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2364,6 +2369,12 @@ PrefabInstance:
 --- !u!4 &89525323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 482547193925635823, guid: 00b286560eaefde47802ef4271efe745,
+    type: 3}
+  m_PrefabInstance: {fileID: 89525322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &89525324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1006988486051157077, guid: 00b286560eaefde47802ef4271efe745,
     type: 3}
   m_PrefabInstance: {fileID: 89525322}
   m_PrefabAsset: {fileID: 0}
@@ -4063,7 +4074,7 @@ PrefabInstance:
     - target: {fileID: 4602852796787482287, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
       propertyPath: m_Name
-      value: Fox (Underscore)
+      value: Word (Underscore)
       objectReference: {fileID: 0}
     - target: {fileID: 4602852797478967883, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
@@ -4090,6 +4101,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4602852795515899514, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1842567004}
+    - targetCorrespondingSourceObject: {fileID: 4602852795515899514, guid: cfa981263a58658438e63da9d1db0511,
+        type: 3}
       insertIndex: -1
       addedObject: {fileID: 13667905}
     m_AddedComponents:
@@ -4108,6 +4123,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 178952737}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &178952739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4602852797478967885, guid: cfa981263a58658438e63da9d1db0511,
+    type: 3}
+  m_PrefabInstance: {fileID: 178952737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76d160ffba6da548af49559d89da518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &183989701
 Material:
   serializedVersion: 8
@@ -6340,7 +6367,7 @@ PrefabInstance:
     - target: {fileID: 4602852796787482287, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
       propertyPath: m_Name
-      value: Kids (Underscore)
+      value: Word (Underscore)
       objectReference: {fileID: 0}
     - target: {fileID: 4602852797478967873, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
@@ -7542,7 +7569,7 @@ PrefabInstance:
     - target: {fileID: 4602852796787482287, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
       propertyPath: m_Name
-      value: Cat (Underscore)
+      value: Word (Underscore)
       objectReference: {fileID: 0}
     - target: {fileID: 4602852797478967883, guid: cfa981263a58658438e63da9d1db0511,
         type: 3}
@@ -19170,6 +19197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat (Shadow)
       objectReference: {fileID: 0}
+    - target: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36,
         type: 3}
       propertyPath: m_RootOrder
@@ -19283,6 +19315,12 @@ PrefabInstance:
 --- !u!4 &1039540972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1039540971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1039540973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36,
     type: 3}
   m_PrefabInstance: {fileID: 1039540971}
   m_PrefabAsset: {fileID: 0}
@@ -19403,6 +19441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ant_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 1006988486051157077, guid: 00b286560eaefde47802ef4271efe745,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19411,6 +19454,12 @@ PrefabInstance:
 --- !u!4 &1058729916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 482547193925635823, guid: 00b286560eaefde47802ef4271efe745,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058729915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1058729917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1006988486051157077, guid: 00b286560eaefde47802ef4271efe745,
     type: 3}
   m_PrefabInstance: {fileID: 1058729915}
   m_PrefabAsset: {fileID: 0}
@@ -27090,6 +27139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat
       objectReference: {fileID: 0}
+    - target: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36,
         type: 3}
       propertyPath: m_RootOrder
@@ -27203,6 +27257,12 @@ PrefabInstance:
 --- !u!4 &1502112646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2554720417436106229, guid: 076879464bd682945aa7cd31ae139a36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502112645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502112647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1526554761915109350, guid: 076879464bd682945aa7cd31ae139a36,
     type: 3}
   m_PrefabInstance: {fileID: 1502112645}
   m_PrefabAsset: {fileID: 0}
@@ -32711,6 +32771,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1842567003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842567004}
+  - component: {fileID: 1842567005}
+  m_Layer: 0
+  m_Name: Animal Presenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1842567004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842567003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 178952738}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1842567005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842567003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b1fd71e3fcc8848a50cebdb21e0d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catModel: {fileID: 1502112647}
+  catModelShadow: {fileID: 1039540973}
+  antModel: {fileID: 1058729917}
+  antModelShadow: {fileID: 89525324}
+  scan: {fileID: 178952739}
 --- !u!43 &1844921043
 Mesh:
   m_ObjectHideFlags: 0
