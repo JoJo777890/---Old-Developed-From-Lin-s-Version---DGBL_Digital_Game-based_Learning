@@ -32,23 +32,7 @@ public class WordScanCollector : MonoBehaviour
         fullMessage = "";
 
         // 將當下bookSymbolObjects[]陣列內容，一個一個加到要顯示的 String
-        for (int i = 0; i < bookSymbolObjects.Length; i++)
-        {
-            // currMessage 取得在 bookSymbolObjects 陣列中，Scan到的字串。
-            currMessage = bookSymbolObjects[i].GetComponent<Scan>().displayText;
-
-            // 顯示訊息 + currMessage
-            fullMessage += currMessage;
-
-            // 在訊息後面加上"Correct! (+100)"
-            if (CheckAnimals() == true)
-            {
-                fullMessage += " Correct! (+100)";
-            }
-
-            // 顯示訊息 + "下一行"
-            fullMessage += "\n";
-        }
+        CheckEveryMessage();
 
         // String 顯示
         scanMessage.text = fullMessage;
@@ -67,5 +51,33 @@ public class WordScanCollector : MonoBehaviour
         }
 
         return false;
+    }
+
+    void MessageCheckToAddScore()
+    {
+        // 在訊息後面加上"Correct! (+100)"
+        if (CheckAnimals() == true)
+        {
+            fullMessage += " Correct! (+100)";
+        }
+    }
+
+    void CheckEveryMessage()
+    {
+        // 將當下bookSymbolObjects[]陣列內容，一個一個加到要顯示的 String
+        for (int i = 0; i < bookSymbolObjects.Length; i++)
+        {
+            // currMessage 取得在 bookSymbolObjects 陣列中，Scan到的字串。
+            currMessage = bookSymbolObjects[i].GetComponent<Scan>().displayText;
+
+            // 顯示訊息 + currMessage
+            fullMessage += currMessage;
+
+            // 如果 currMessage 答對，fullMessage 後面連接上"加分訊息"
+            MessageCheckToAddScore();
+
+            // 顯示訊息 + "下一行"
+            fullMessage += "\n";
+        }
     }
 }
