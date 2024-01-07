@@ -15,6 +15,8 @@ public class AnimalPresenter : MonoBehaviour
     private string wordCat = "cat";
     private string wordAnt = "ant";
 
+    private bool hasCorrectWord = false;
+
     void Start()
     {
         Scan.onFullScan += CheckCatSameLetters;
@@ -28,42 +30,62 @@ public class AnimalPresenter : MonoBehaviour
 
     void CheckCatSameLetters()
     {
-        for (int i = 0; i < 3; i++)
+        if (hasCorrectWord == false)
         {
-            for (int j = 0; j < 3; j++)
+            for (int i = 0; i < scan.displayText.Length; i++)
             {
-                // Make this an another function
-                if (scan.displayText[i] == wordCat[j])
+                for (int j = 0; j < wordCat.Length; j++)
                 {
-                    catModelShadow.SetActive(true);
+                    // Make this an another function
+                    if (scan.displayText[i] == wordCat[j])
+                    {
+                        catModelShadow.SetActive(true);
+                    }
                 }
             }
-        }
 
-        if (string.Equals(scan.displayText, wordCat) == true)
+            if (string.Equals(scan.displayText, wordCat) == true)
+            {
+                catModelShadow.SetActive(false);
+                catModel.SetActive(true);
+
+                hasCorrectWord = true;
+            }
+        }
+        else
         {
             catModelShadow.SetActive(false);
-            catModel.SetActive(true);
         }
+
     }
 
     void CheckAntSameLetters()
     {
-        for (int i = 0; i < 3; i++)
+        if (hasCorrectWord == false)
         {
-            for (int j = 0; j < 3; j++)
+            for (int i = 0; i < scan.displayText.Length; i++)
             {
-                if (scan.displayText[i] == wordAnt[j])
+                for (int j = 0; j < wordAnt.Length; j++)
                 {
-                    antModelShadow.SetActive(true);
+                    // Make this an another function
+                    if (scan.displayText[i] == wordAnt[j])
+                    {
+                        antModelShadow.SetActive(true);
+                    }
                 }
             }
-        }
 
-        if (string.Equals(scan.displayText, wordAnt) == true)
+            if (string.Equals(scan.displayText, wordAnt) == true)
+            {
+                antModelShadow.SetActive(false);
+                antModel.SetActive(true);
+
+                hasCorrectWord = true;
+            }
+        }
+        else
         {
             antModelShadow.SetActive(false);
-            antModel.SetActive(true);
         }
     }
 }
