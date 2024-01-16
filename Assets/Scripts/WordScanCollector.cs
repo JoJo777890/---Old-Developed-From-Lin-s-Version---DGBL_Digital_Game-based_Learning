@@ -10,7 +10,7 @@ public class WordScanCollector : MonoBehaviour
     public Text scanMessage;
     public TextMeshProUGUI statScore;
     public GameObject[] bookSymbolObjects;
-    public string[] animalNames = { "cat", "fox", "bear", "wolf", "tiger", "eagle", "rhino" };
+    public string[] animalNames = { "cat", "ant", "fox", "bear", "wolf", "tiger", "eagle", "rhino" };
 
     private bool doAddScore = false;
     private int playerScore = 0;
@@ -44,6 +44,7 @@ public class WordScanCollector : MonoBehaviour
         // 檢查 currMessage 是否符合陣列中的動物名稱
         for (int j = 0; j < animalNames.Length; j++)
         {
+            Debug.Log(currMessage);
             if (string.Equals(currMessage, animalNames[j]) == true)
             {
                 return true;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Scan : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class Scan : MonoBehaviour
     public Model modelScript; // Model 脚本的引用
     public string displayText;
 
+    public static event Action onFullScan;
+
     private List<string> touchedObjects = new List<string>(); // 存储碰到的物体的名称
     private bool isMoving = false; // 判断物体是否应该移动
     private bool isScheduledForDestruction = false; // 判断物体是否已经安排销毁
+
 
     private void Start()
     {
@@ -37,6 +41,7 @@ public class Scan : MonoBehaviour
             {
                 // 启动计时器，在3秒后调用DestroyObject方法
                 Invoke("DestroyObject", 3f);
+                Invoke("CheckSameLetter", 1.5f);// 越長的英文單字，可能會 Scan的時間不夠
                 isScheduledForDestruction = true;
             }
         }
@@ -121,7 +126,12 @@ public class Scan : MonoBehaviour
 
     }
 
-    //反轉字串
+    void CheckSameLetter()
+    {
+        onFullScan?.Invoke();
+    }
+
+    //反轉字串(需要？)
     string ReverseString(string input)
     {
         char[] charArray = input.ToCharArray();

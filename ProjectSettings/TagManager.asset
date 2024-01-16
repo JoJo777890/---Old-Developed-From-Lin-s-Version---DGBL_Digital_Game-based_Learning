@@ -8,6 +8,7 @@ TagManager:
   - BookSymbols
   - Scanners
   - Animals
+  - Audio
   layers:
   - Default
   - TransparentFX
