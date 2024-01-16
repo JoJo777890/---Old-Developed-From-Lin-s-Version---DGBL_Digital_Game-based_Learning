@@ -22,7 +22,8 @@ public class ResetGame : MonoBehaviour
     }
     void Reset()
     {
-        // 重新加载当前场景
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }

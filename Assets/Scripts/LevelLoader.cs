@@ -18,7 +18,11 @@ public class LevelLoader : MonoBehaviour
             click++;
             if (click == 2)
             {
-                LoadNextLevel();
+                // 原本程式
+                // LoadNextLevel();
+
+                // 修改程式 (為了方便重新整理 "Level 1")
+                SceneManager.LoadScene(0);
             }
         }
     }

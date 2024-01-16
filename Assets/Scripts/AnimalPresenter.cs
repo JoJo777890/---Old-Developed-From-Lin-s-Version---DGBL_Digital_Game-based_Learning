@@ -10,6 +10,8 @@ public class AnimalPresenter : MonoBehaviour
     public GameObject antModel;
     public GameObject antModelShadow;
 
+    public AudioManager audioManager;
+
     public Scan scan;
 
     private string wordCat = "cat";
@@ -21,6 +23,7 @@ public class AnimalPresenter : MonoBehaviour
     {
         Scan.onFullScan += CheckCatSameLetters;
         Scan.onFullScan += CheckAntSameLetters;
+
 
         catModelShadow.SetActive(false);
         catModel.SetActive(false);
@@ -40,6 +43,7 @@ public class AnimalPresenter : MonoBehaviour
                     if (scan.displayText[i] == wordCat[j])
                     {
                         catModelShadow.SetActive(true);
+                        Debug.Log("Cat shadow model " + i + "show.");
                     }
                 }
             }
@@ -48,6 +52,8 @@ public class AnimalPresenter : MonoBehaviour
             {
                 catModelShadow.SetActive(false);
                 catModel.SetActive(true);
+
+                audioManager.PlaySFX(audioManager.correctAnimal);
 
                 hasCorrectWord = true;
             }
@@ -79,6 +85,8 @@ public class AnimalPresenter : MonoBehaviour
             {
                 antModelShadow.SetActive(false);
                 antModel.SetActive(true);
+
+                audioManager.PlaySFX(audioManager.correctAnimal);
 
                 hasCorrectWord = true;
             }
