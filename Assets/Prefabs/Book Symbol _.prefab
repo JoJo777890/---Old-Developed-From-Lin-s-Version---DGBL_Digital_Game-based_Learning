@@ -50,13 +50,13 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 4bc5fd733b147194692297d23f623541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: BookSymbol2_CameraCaptured
+  mTrackableName: V4_Book_Symbol_1_Camera_Captured
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/BookSymbol.xml
-  mAspectRatio: 1.0498866
+  mAspectRatio: 0.84702665
   mImageTargetType: 0
   mWidth: 0.3
-  mHeight: 0.314966
+  mHeight: 0.254108
   mRuntimeTexture: {fileID: 0}
 --- !u!114 &4602852795515899512
 MonoBehaviour:
@@ -356,7 +356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.801, y: 0.049999997}
+  m_AnchoredPosition: {x: 0.885, y: 0.049999997}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4602852796787482274
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: _ _ _
+  m_text: _  _  _
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
