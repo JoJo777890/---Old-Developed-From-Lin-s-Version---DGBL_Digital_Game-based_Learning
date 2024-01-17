@@ -21,9 +21,13 @@ public class AnimalPresenter : MonoBehaviour
 
     void Start()
     {
+        hasCorrectWord = false;
+
+        Debug.Log("**TorF" + hasCorrectWord);
+
         Scan.onFullScan += CheckCatSameLetters;
         Scan.onFullScan += CheckAntSameLetters;
-
+        Debug.Log("***TorF" + hasCorrectWord);
 
         catModelShadow.SetActive(false);
         catModel.SetActive(false);
@@ -33,8 +37,10 @@ public class AnimalPresenter : MonoBehaviour
 
     void CheckCatSameLetters()
     {
+        Debug.Log("TorF" + hasCorrectWord);
         if (hasCorrectWord == false)
         {
+            Debug.Log("TorF Entered");
             for (int i = 0; i < scan.displayText.Length; i++)
             {
                 for (int j = 0; j < wordCat.Length; j++)

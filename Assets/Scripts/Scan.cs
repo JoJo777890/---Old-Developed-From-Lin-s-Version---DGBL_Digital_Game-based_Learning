@@ -19,6 +19,10 @@ public class Scan : MonoBehaviour
     private bool isMoving = false; // 判断物体是否应该移动
     private bool isScheduledForDestruction = false; // 判断物体是否已经安排销毁
 
+    void Awake()
+    {
+        onFullScan = null;
+    }
 
     private void Start()
     {
@@ -128,6 +132,7 @@ public class Scan : MonoBehaviour
 
     void CheckSameLetter()
     {
+        //Debug.Log("***************");
         onFullScan?.Invoke();
     }
 
