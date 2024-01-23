@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     //public LevelTimer levelTimer;
 
     public float transitionTime = 1f;
+    public float RetryUITransitionTime = 3f;
     private int click = 0;
     private int sceneIndex;
 
@@ -62,8 +63,8 @@ public class LevelLoader : MonoBehaviour
     public void ReloadLevel()
     {
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-            
-        StartCoroutine(ReloadLevel(sceneIndex));
+
+        StartCoroutine(ShowRetryUI(sceneIndex));
     }
 
     // Load NextLevel Animation
@@ -77,13 +78,22 @@ public class LevelLoader : MonoBehaviour
     }
 
     // Reload Level Animation
-    IEnumerator ReloadLevel(int levelIndex)
+    //IEnumerator ReloadLevel(int levelIndex)
+    //{
+    //    transition.SetTrigger("Retry End");
+
+    //    yield return new WaitForSeconds(transitionTime);
+
+    //    transition.SetTrigger("Retry Start");
+
+    //    SceneManager.LoadScene(levelIndex);
+    //}
+
+    IEnumerator ShowRetryUI(int levelIndex)
     {
-        transition.SetTrigger("Retry End");
+        transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitionTime);
-
-        transition.SetTrigger("Retry Start");
+        yield return new WaitForSeconds(RetryUITransitionTime);
 
         SceneManager.LoadScene(levelIndex);
     }
