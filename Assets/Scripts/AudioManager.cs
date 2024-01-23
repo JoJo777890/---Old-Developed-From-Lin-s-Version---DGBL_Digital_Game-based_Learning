@@ -10,6 +10,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip correctAnimal;
     public AudioClip Retry;
 
+    void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
