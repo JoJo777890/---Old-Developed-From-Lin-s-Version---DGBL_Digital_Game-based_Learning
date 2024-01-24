@@ -9,7 +9,7 @@ public class LevelTimer : MonoBehaviour
     public AudioManager audioManager;
 
     private float timer;
-    public float timerLength = 3f;
+    public float timerLength = 10f;
 
     public TextMeshProUGUI levelTimerText;
 

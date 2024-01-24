@@ -28974,7 +28974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 1701056912}
-  timerLength: 5
+  timerLength: 10
   levelTimerText: {fileID: 1870278298}
 --- !u!4 &1604700637
 Transform:
